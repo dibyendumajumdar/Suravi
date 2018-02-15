@@ -18,13 +18,13 @@ Library | Description | Status
 --- | --- | ---
 [LPegLabel](https://github.com/sqmedeiros/lpeglabel/) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Planned  
 [LuaFileSystem](https://github.com/keplerproject/luafilesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Planned
-luasocket | xx | x 
-libuv (Luvit) | xx | x
-libcurl (wrapper tbc) | xx | x
-lua-cjson | xx | x
-torch7 | xx | x
-luaossl | xx | x
-cephes (wrapper tbc) | xx | x
+[LuaSocket](https://github.com/diegonehab/luasocket) | LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet | Planned 
+libuv (Luvit) | xx | Planned
+libcurl (wrapper tbc) | xx | Planned
+lua-cjson | xx | Planned
+torch7 | xx | Planned
+luaossl | xx | Planned
+cephes (wrapper tbc) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Planned
 [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included
 
 ## Instructions

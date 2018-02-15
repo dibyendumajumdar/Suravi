@@ -22,7 +22,7 @@ Library | Description | Status
 libuv (Luvit) | xx | Planned
 libcurl (wrapper tbc) | xx | Planned
 lua-cjson | xx | Planned
-torch7 | xx | Planned
+[Torch](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities | Planned
 luaossl | xx | Planned
 [cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Planned
 [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included

@@ -14,16 +14,18 @@ This is currently work-in-progress distribution of Lua / Ravi 5.3.
 
 The following libraries have been shortlisted for inclusion:
 
-- lpeg
-- luafilesystem
-- luasocket
-- libuv (Luvit)
-- libcurl (wrapper tbc)
-- lua-cjson
-- torch7
-- luaossl
-- cephes (wrapper tbc)
-- [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) based on luaffi/luaffifb (port of LuaJIT FFI interface)
+Library | Description | Status
+--- | --- | ---
+[LPregLabel](https://github.com/sqmedeiros/lpeglabel/) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Planned  
+[LuaFileSystem](https://github.com/keplerproject/luafilesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Planned
+luasocket | xx | x 
+libuv (Luvit) | xx | x
+libcurl (wrapper tbc) | xx | x
+lua-cjson | xx | x
+torch7 | xx | x
+luaossl | xx | x
+cephes (wrapper tbc) | xx | x
+[ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included
 
 ## Instructions
 

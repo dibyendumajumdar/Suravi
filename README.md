@@ -24,7 +24,7 @@ libcurl (wrapper tbc) | xx | Planned
 lua-cjson | xx | Planned
 torch7 | xx | Planned
 luaossl | xx | Planned
-cephes (wrapper tbc) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Planned
+[cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Planned
 [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included
 
 ## Instructions

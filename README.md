@@ -28,3 +28,15 @@ The following libraries have been shortlisted for inclusion:
 ## Instructions
 
 The distro is still under development and is not ready for use yet. However, as support gets added for the libraries above, interim alpha-releases will be made available.
+
+## Lua Version and Build Info
+
+The version of Lua included in this distro is 5.3. The following changes were made to stock Lua:
+
+- The LuaJIT bit library is included
+- The `LUA_COMPAT_FLOATSTRING` flag is enabled
+- The Lua 5.1 and 5.2 compatibility flags are enabled
+
+## Ravi Version and Build Info
+
+The plan is to have LLVM enabled in the Ravi build.

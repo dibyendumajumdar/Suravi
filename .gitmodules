@@ -1,0 +1,10 @@
+[submodule "lua"]
+	path = lua
+	url = https://github.com/dibyendumajumdar/lua.git
+	branch = lua53
+[submodule "ravi"]
+	path = ravi
+	url = https://github.com/dibyendumajumdar/ravi.git
+[submodule "ravi-ffi"]
+	path = ravi-ffi
+	url = https://github.com/dibyendumajumdar/ravi-ffi.git

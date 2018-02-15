@@ -4,7 +4,7 @@ This is currently work-in-progress distribution of Lua / Ravi 5.3.
 
 ## Goals
 
-* This is not a comprehensive distribution / pacakage manager for Lua such as [LuaRocks](https://luarocks.org/), [LuaDist](http://luadist.org/), or [LuaPlus](https://github.com/jjensen/luaplus51-all).
+* This is not a comprehensive distribution / package manager for Lua such as [LuaRocks](https://luarocks.org/), [LuaDist](http://luadist.org/), or [LuaPlus](https://github.com/jjensen/luaplus51-all).
 * The goal of this distribution is to create a _small_ distro with carefully selected libraries, and ensure that the distro has been tested as a whole.
 * There will separate binary downloads for Lua and Ravi 5.3
 * Target platforms are Windows 10, Linux, and Mac OSX; 64-bit versions only

@@ -25,3 +25,6 @@ The following libraries have been shortlisted for inclusion:
 - cephes (wrapper tbc)
 - [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) based on luaffi/luaffifb (port of LuaJIT FFI interface)
 
+## Instructions
+
+The distro is still under development and is not ready for use yet. However, as support gets added for the libraries above, interim alpha-releases will be made available.

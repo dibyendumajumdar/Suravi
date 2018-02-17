@@ -59,7 +59,7 @@ This is manual at present.
 * Ensure CMake is installed
 
 * Install BLAS and LAPACK.
-  - On Windows you can use VCPKG. On my system the `vcpkg list` command displays:
+  - On Windows you can use [VCPKG](https://github.com/Microsoft/vcpkg). On my system the `vcpkg list` command displays:
   
 ```
 vcpkg list

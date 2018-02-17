@@ -28,11 +28,9 @@ libcurl (wrapper tbc) | xx | Planned
 [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included
 
 ## Instructions
-
 The distro is still under development and is not ready for use yet. However, as support gets added for the libraries above, interim alpha-releases will be made available.
 
 ## Lua Version and Build Info
-
 The version of Lua included in this distro is 5.3. The following changes were made to stock Lua:
 
 - The LuaJIT bit library is included
@@ -40,11 +38,9 @@ The version of Lua included in this distro is 5.3. The following changes were ma
 - The Lua 5.1 and 5.2 compatibility flags are enabled
 
 ## Ravi Version and Build Info
-
 The plan is to have LLVM enabled in the Ravi build.
 
 ## Notes on Building the Distribution
-
 These are incomplete notes.
 
 #### External dependencies
@@ -73,7 +69,7 @@ openblas:x64-windows-static           0.2.20-2         OpenBLAS is an optimized 
   - c:/Software/lua53 or c:/Software/ravi on Windows
   - ~/lua53 or ~/ravi on Unix systems
 
-* Install Lua 5.3 or Ravi first. Ensure that `-DCMAKE_INSTALL_PREFIX` is defined as above. If you did not use the default location aboce then you will need to amend the `FindLua.cmake` scripts in all the projects.
+* Install Lua 5.3 or Ravi first. Ensure that `-DCMAKE_INSTALL_PREFIX` is defined as above. If you did not use the default location above then you will need to amend the `FindLua.cmake` scripts in all the projects.
   
 * Build packages in following order. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi
   - ravi-ffi
@@ -84,8 +80,9 @@ openblas:x64-windows-static           0.2.20-2         OpenBLAS is an optimized 
 
 Once the distro is built, set environment variables appropriately for locating the distro. You will need to set:
 
-- PATH on all platforms
-- LD_LIBRARY_PATH on Linux 
-- DYLD_LIBRARY_PATH on Mac OSX
+- `PATH` on all platforms
+- `LD_LIBRARY_PATH` on Linux 
+- `DYLD_LIBRARY_PATH` on Mac OSX
+- Additionally on Mac OSX `LUA_CPATH` must be set. 
 
 Each package in the distro must be tested.

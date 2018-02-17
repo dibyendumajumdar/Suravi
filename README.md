@@ -4,8 +4,8 @@ This is currently work-in-progress distribution of Lua / Ravi 5.3.
 
 ## Goals
 
-* This is not a comprehensive distribution / package manager for Lua such as [LuaRocks](https://luarocks.org/), [LuaDist](http://luadist.org/), or [LuaPlus](https://github.com/jjensen/luaplus51-all).
-* The goal of this distribution is to create a _small_ distro with carefully selected libraries, and ensure that the distro has been tested as a whole.
+* This is *not* a comprehensive distribution / package manager for Lua such as [LuaRocks](https://luarocks.org/), [LuaDist](http://luadist.org/), or [LuaPlus](https://github.com/jjensen/luaplus51-all).
+* The goal of this distribution is to create a *small* distro with carefully selected libraries, and ensure that the distro has been tested as a whole.
 * There will separate binary downloads for Lua and Ravi 5.3
 * Target platforms are Windows 10, Linux, and Mac OSX; 64-bit versions only
 
@@ -21,7 +21,8 @@ Library | Description | Status
 [luv](https://github.com/luvit/luv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Planned
 libcurl (wrapper tbc) | xx | Planned
 [lua-cjson](https://github.com/mpx/lua-cjson) | Lua CJSON is a fast JSON encoding/parsing module for Lua  | Planned
-[Torch](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities | Planned
+[Torch](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities | Included
+[paths](https://github.com/dibyendumajumdar/ravi-torch-paths.git) | This package provides portable functions and variables to manipulate the file system; part of the Torch system. In future this may be moved inside the Torch package | Included
 [luaossl](https://github.com/wahern/luaossl) | Most comprehensive OpenSSL module in the Lua universe | Planned
 [cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Planned
 [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included

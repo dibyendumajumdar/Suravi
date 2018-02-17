@@ -59,9 +59,15 @@ This is manual at present.
 * Ensure CMake is installed
 
 * Install BLAS and LAPACK.
-  - On Windows you can use VCPKG or ravi-dist
-  - If installing ravi-dist set CMAKE_INSTALL_PREFIX to c:/Software/ravi.
-  - Ensure that c:/Software/ravi/bin is in the system path so that DLLs can be found.
+  - On Windows you can use VCPKG. On my system the `vcpkg list` command displays:
+  
+```
+vcpkg list
+clapack:x64-windows                                3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
+clapack:x64-windows-static                         3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
+openblas:x64-windows                               0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
+openblas:x64-windows-static                        0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
+```
 
 * Install Lua 5.3 or Ravi first. The distro assumes the following locations for these, if you change these then you will need to amend the FindLua.cmake scripts in all the projects.
   - c:/Software/lua53 or c:/Software/ravi on Windows

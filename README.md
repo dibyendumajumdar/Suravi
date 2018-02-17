@@ -63,20 +63,29 @@ This is manual at present.
   
 ```
 vcpkg list
-clapack:x64-windows                                3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
-clapack:x64-windows-static                         3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
-openblas:x64-windows                               0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
-openblas:x64-windows-static                        0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
+clapack:x64-windows                   3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
+clapack:x64-windows-static            3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
+openblas:x64-windows                  0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
+openblas:x64-windows-static           0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
 ```
 
-* Install Lua 5.3 or Ravi first. The distro assumes the following locations for these, if you change these then you will need to amend the FindLua.cmake scripts in all the projects.
+* Decide on the home folder for the distro. The distro assumes the following locations for these, if you change these then you will need to amend the `FindLua.cmake` scripts in all the projects.
   - c:/Software/lua53 or c:/Software/ravi on Windows
   - ~/lua53 or ~/ravi on Unix systems
+
+* Install Lua 5.3 or Ravi first. Ensure that `-DCMAKE_INSTALL_PREFIX` is defined as above. If you did not use the default location aboce then you will need to amend the `FindLua.cmake` scripts in all the projects.
   
-* Build packages in following order. Note that you need to supply '-DUSE_LUA53=ON' to CMake if you are building for Lua 5.3. Defauft is to build for Ravi
+* Build packages in following order. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi
   - ravi-ffi
   - ravi-torch-paths
   - ravi-torch7
   
 #### Testing the Distro
 
+Once the distro is built, set environment variables appropriately for locating the distro. You will need to set:
+
+- PATH on all platforms
+- LD_LIBRARY_PATH on Linux 
+- DYLD_LIBRARY_PATH on Mac OSX
+
+Each package in the distro must be tested.

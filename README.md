@@ -66,8 +66,8 @@ openblas:x64-windows-static           0.2.20-2         OpenBLAS is an optimized 
 ```
 
 * Decide on the home folder for the distro. The distro assumes the following locations for these, if you change these then you will need to amend the `FindLua.cmake` scripts in all the projects.
-  - c:/Software/lua53 or c:/Software/ravi on Windows
-  - ~/lua53 or ~/ravi on Unix systems
+  - `c:/Software/lua53` or `c:/Software/ravi` on Windows
+  - `~/lua53` or `~/ravi` on Unix systems
 
 * Install Lua 5.3 or Ravi first. Ensure that `-DCMAKE_INSTALL_PREFIX` is defined as above. If you did not use the default location above then you will need to amend the `FindLua.cmake` scripts in all the projects.
   

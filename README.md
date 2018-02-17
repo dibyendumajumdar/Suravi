@@ -42,3 +42,35 @@ The version of Lua included in this distro is 5.3. The following changes were ma
 ## Ravi Version and Build Info
 
 The plan is to have LLVM enabled in the Ravi build.
+
+## Notes on Building the Distribution
+
+These are incomplete notes.
+
+#### External dependencies
+
+* BLAS and LAPACK libraries are needed. 
+* CMake is used as the build system
+
+#### Build process
+
+This is manual at present.
+
+* Ensure CMake is installed
+
+* Install BLAS and LAPACK.
+  - On Windows you can use VCPKG or ravi-dist
+  - If installing ravi-dist set CMAKE_INSTALL_PREFIX to c:/Software/ravi.
+  - Ensure that c:/Software/ravi/bin is in the system path so that DLLs can be found.
+
+* Install Lua 5.3 or Ravi first. The distro assumes the following locations for these, if you change these then you will need to amend the FindLua.cmake scripts in all the projects.
+  - c:/Software/lua53 or c:/Software/ravi on Windows
+  - ~/lua53 or ~/ravi on Unix systems
+  
+* Build packages in following order
+  - ravi-ffi
+  - ravi-torch-paths
+  - ravi-torch7
+  
+#### Testing the Distro
+

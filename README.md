@@ -67,7 +67,7 @@ This is manual at present.
   - c:/Software/lua53 or c:/Software/ravi on Windows
   - ~/lua53 or ~/ravi on Unix systems
   
-* Build packages in following order
+* Build packages in following order. Note that you need to supply '-DUSE_LUA53=ON' to CMake if you are building for Lua 5.3. Defauft is to build for Ravi
   - ravi-ffi
   - ravi-torch-paths
   - ravi-torch7

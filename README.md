@@ -50,7 +50,7 @@ These are incomplete notes.
 
 #### Installing BLAS / LAPACK on Ubuntu 16.x
 
-For information on how to install and configure BLAS and LAPACK refer to information at `DebianScience Wiki  <http://wiki.debian.org/DebianScience/LinearAlgebraLibraries>`_.
+For information on how to install and configure BLAS and LAPACK refer to information at [DebianScience Wiki](http://wiki.debian.org/DebianScience/LinearAlgebraLibraries).
 
 Install OpenBLAS as follows:
 ```

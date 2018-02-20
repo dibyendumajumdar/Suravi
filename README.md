@@ -107,10 +107,33 @@ make
 make install
 ```  
 
-* Build packages in following order. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi
-  - ravi-ffi
-  - ravi-torch-paths
-  - ravi-torch7
+* Build packages in following order. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi.
+
+* Build ravi-ffi
+ 
+For example, on Ubuntu:
+
+```
+cd ravi-ffi
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
+make
+make install
+```    
+  
+* Build ravi-torch-paths
+
+```
+cd ravi-torch-paths
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
+make
+make install
+```    
+
+* Build ravi-torch7
   
 #### Testing the Distro
 

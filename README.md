@@ -92,7 +92,12 @@ git submodule update --init --recursive
 
 * Install Lua 5.3 or Ravi first. Ensure that `-DCMAKE_INSTALL_PREFIX` is defined as above. If you did not use the default location above then you will need to amend the `FindLua.cmake` scripts in all the projects.
 
-For example, on Ubuntu:
+For example, on Ubuntu, follow these steps to build and install Ravi.
+But first, in case you don't have readline installed:
+```
+sudo apt-get install libreadline6 libreadline6-dev
+```
+Here we will build Ravi without LLVM:
 ```
 cd ravi
 mkdir build

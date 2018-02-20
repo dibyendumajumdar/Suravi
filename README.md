@@ -99,7 +99,7 @@ sudo apt-get install libreadline6 libreadline6-dev
 ```
 Here we will build Ravi without LLVM:
 ```
-cd ravi
+cd ravi-distro/ravi
 mkdir build
 cd build
 cmake -DSTATIC_BUILD=OFF -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
@@ -114,7 +114,7 @@ make install
 For example, on Ubuntu:
 
 ```
-cd ravi-ffi
+cd ravi-distro/ravi-ffi
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
@@ -125,7 +125,7 @@ make install
 * Build ravi-torch-paths
 
 ```
-cd ravi-torch-paths
+cd ravi-distro/ravi-torch-paths
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
@@ -134,6 +134,15 @@ make install
 ```    
 
 * Build ravi-torch7
+
+```
+cd ravi-distro/ravi-torch7
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
+make
+make install
+```    
   
 #### Testing the Distro
 

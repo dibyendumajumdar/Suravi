@@ -83,8 +83,25 @@ This is manual at present.
   - `c:/Software/lua53` or `c:/Software/ravi` on Windows
   - `~/lua53` or `~/ravi` on Unix systems
 
+* Clone the respository and update the submodules.
+```
+git clone https://github.com/dibyendumajumdar/ravi-distro.git
+cd ravi-distro
+git submodule update --init --recursive
+```
+
 * Install Lua 5.3 or Ravi first. Ensure that `-DCMAKE_INSTALL_PREFIX` is defined as above. If you did not use the default location above then you will need to amend the `FindLua.cmake` scripts in all the projects.
-  
+
+For example, on Ubuntu:
+```
+cd ravi
+mkdir build
+cd build
+cmake -DSTATIC_BUILD=OFF -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
+make
+make install
+```  
+
 * Build packages in following order. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi
   - ravi-ffi
   - ravi-torch-paths

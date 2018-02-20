@@ -62,14 +62,10 @@ Configure OpenBLAS to be the default BLAS as follows:
   sudo update-alternatives --config libblas.so.3
   sudo update-alternatives --config liblapack.so.3
 ```
-#### Build process
 
-This is manual at present.
+#### Install BLAS and LAPACK on Windows 10
 
-* Ensure CMake is installed
-
-* Install BLAS and LAPACK.
-  - On Windows you can use [VCPKG](https://github.com/Microsoft/vcpkg). On my system the `vcpkg list` command displays:
+On Windows you can use [VCPKG](https://github.com/Microsoft/vcpkg). On my system the `vcpkg list` command displays:
   
 ```
 vcpkg list
@@ -78,6 +74,10 @@ clapack:x64-windows-static            3.2.1-1          CLAPACK (f2c'ed version o
 openblas:x64-windows                  0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
 openblas:x64-windows-static           0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
 ```
+
+#### Build process
+
+This is manual at present.
 
 * Decide on the home folder for the distro. The distro assumes the following locations for these, if you change these then you will need to amend the `FindLua.cmake` scripts in all the projects.
   - `c:/Software/lua53` or `c:/Software/ravi` on Windows

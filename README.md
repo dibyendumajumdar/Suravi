@@ -144,13 +144,25 @@ make
 make install
 ```    
   
-#### Testing the Distro
+### Setup environment
 
 Once the distro is built, set environment variables appropriately for locating the distro. You will need to set:
 
 - `PATH` on all platforms
 - `LD_LIBRARY_PATH` on Linux 
 - `DYLD_LIBRARY_PATH` on Mac OSX
-- Additionally on Mac OSX `LUA_CPATH` must be set. 
+- `LUA_PATH` and `LUA_CPATH` must be set.
+
+#### On Linux
+
+```
+export RAVI_HOME=$HOME/ravi
+export PATH=$RAVI_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$RAVI_HOME/lib:$LD_LIBRARY_PATH
+export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua"
+export LUA_CPATH="$RAVI_HOME/lib/?.so;$RAVI_HOME/lib/lib?.so"
+```
+
+### Testing the distro
 
 Each package in the distro must be tested.

@@ -43,7 +43,7 @@ The plan is to have LLVM enabled in the Ravi build.
 ## Notes on Building the Distribution
 These are incomplete notes.
 
-#### External dependencies
+### External dependencies
 
 * BLAS and LAPACK libraries are needed. 
 * CMake is used as the build system
@@ -75,7 +75,7 @@ openblas:x64-windows                  0.2.20-2         OpenBLAS is an optimized 
 openblas:x64-windows-static           0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
 ```
 
-#### Build process
+### Build process
 
 This is manual at present.
 

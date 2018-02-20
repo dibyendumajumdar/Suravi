@@ -48,6 +48,20 @@ These are incomplete notes.
 * BLAS and LAPACK libraries are needed. 
 * CMake is used as the build system
 
+#### Installing BLAS / LAPACK on Ubuntu 16.x
+
+For information on how to install and configure BLAS and LAPACK refer to information at `DebianScience Wiki  <http://wiki.debian.org/DebianScience/LinearAlgebraLibraries>`_.
+
+Install OpenBLAS as follows::
+
+  sudo apt-get install libopenblas-dev
+
+Above should also install LAPACK.
+Configure OpenBLAS to be the default BLAS as follows::
+
+  sudo update-alternatives --config libblas.so.3
+  sudo update-alternatives --config liblapack.so.3
+
 #### Build process
 
 This is manual at present.

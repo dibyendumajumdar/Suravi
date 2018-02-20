@@ -52,16 +52,16 @@ These are incomplete notes.
 
 For information on how to install and configure BLAS and LAPACK refer to information at `DebianScience Wiki  <http://wiki.debian.org/DebianScience/LinearAlgebraLibraries>`_.
 
-Install OpenBLAS as follows::
-
+Install OpenBLAS as follows:
+```
   sudo apt-get install libopenblas-dev
-
+```
 Above should also install LAPACK.
-Configure OpenBLAS to be the default BLAS as follows::
-
+Configure OpenBLAS to be the default BLAS as follows:
+```
   sudo update-alternatives --config libblas.so.3
   sudo update-alternatives --config liblapack.so.3
-
+```
 #### Build process
 
 This is manual at present.

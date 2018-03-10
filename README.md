@@ -1,4 +1,4 @@
-# A distribution of Lua / Ravi 5.3
+# A Distribution of Lua / Ravi 5.3
 
 This is currently work-in-progress distribution of Lua / Ravi 5.3.
 
@@ -26,7 +26,11 @@ Library | Description | Status
 [cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Planned
 [ravi-ffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included
 
-## Instructions
+# Downloads
+
+See the Releases page for available downloads.
+
+# Build Instructions
 The distro is still under development and is not ready for use yet. However, as support gets added for the libraries above, interim alpha-releases will be made available.
 
 ## Lua Version and Build Info
@@ -64,15 +68,7 @@ Configure OpenBLAS to be the default BLAS as follows:
 
 #### Install BLAS and LAPACK on Windows 10
 
-On Windows you can use [VCPKG](https://github.com/Microsoft/vcpkg). On my system the `vcpkg list` command displays:
-  
-```
-vcpkg list
-clapack:x64-windows                   3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
-clapack:x64-windows-static            3.2.1-1          CLAPACK (f2c'ed version of LAPACK)
-openblas:x64-windows                  0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
-openblas:x64-windows-static           0.2.20-2         OpenBLAS is an optimized BLAS library based on G...
-```
+On Windows you can use pre-built libraries I provide in [Ravi Distro Dependencies](https://github.com/dibyendumajumdar/ravi-external-libs).
 
 ### Build process
 

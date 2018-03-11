@@ -15,7 +15,7 @@ The following libraries have been shortlisted for inclusion:
 
 Library | Description | Status
 --- | --- | ---
-[LPegLabel](https://github.com/sqmedeiros/lpeglabel/) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Planned  
+[LPegLabel](https://github.com/dibyendumajumdar/ravi-lpeglabel) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | WIP  
 [LuaFileSystem](https://github.com/keplerproject/luafilesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Planned
 [LuaSocket](https://github.com/diegonehab/luasocket) | LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet | Planned 
 [luv](https://github.com/luvit/luv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Planned

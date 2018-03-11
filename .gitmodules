@@ -16,3 +16,7 @@
 	path = ravi-torch7
 	url = https://github.com/dibyendumajumdar/ravi-torch7.git
 	branch = ravi-distro-aten
+[submodule "ravi-lpeglabel"]
+	path = ravi-lpeglabel
+	url = https://github.com/dibyendumajumdar/ravi-lpeglabel.git
+	branch = ravi-distro

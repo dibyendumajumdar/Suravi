@@ -20,3 +20,7 @@
 	path = ravi-lpeglabel
 	url = https://github.com/dibyendumajumdar/ravi-lpeglabel.git
 	branch = ravi-distro
+[submodule "ravi-luasocket"]
+	path = ravi-luasocket
+	url = https://github.com/dibyendumajumdar/ravi-luasocket.git
+	branch = ravi-distro

@@ -24,3 +24,7 @@
 	path = ravi-luasocket
 	url = https://github.com/dibyendumajumdar/ravi-luasocket.git
 	branch = ravi-distro
+[submodule "ravi-cjson"]
+	path = ravi-cjson
+	url = https://github.com/dibyendumajumdar/ravi-cjson.git
+	branch = ravi-distro

@@ -28,3 +28,7 @@
 	path = ravi-cjson
 	url = https://github.com/dibyendumajumdar/ravi-cjson.git
 	branch = ravi-distro
+[submodule "ravi-filesystem"]
+	path = ravi-filesystem
+	url = https://github.com/dibyendumajumdar/ravi-filesystem.git
+	branch = ravi-distro

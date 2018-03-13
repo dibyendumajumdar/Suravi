@@ -8,6 +8,8 @@ This is currently work-in-progress distribution of Lua / Ravi 5.3.
 * The goal of this distribution is to create a *small* distro with carefully selected libraries, and ensure that the distro has been tested as a whole.
 * There will separate binary downloads for Lua and Ravi 5.3
 * Target platforms are Windows 10, Linux, and Mac OSX; 64-bit versions only
+* The build system is CMake; and the aim is to keep each module as independent of other modules as possible; however some modules such as those from Torch have interdependencies.
+* Create unified documentation and user guides; the whole distro should feel like a single product.
 
 ## Libraries 
 

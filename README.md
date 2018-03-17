@@ -17,11 +17,11 @@ The following libraries have been shortlisted for inclusion:
 
 Library | Description | Status
 --- | --- | ---
-[LPegLabel](https://github.com/dibyendumajumdar/ravi-lpeglabel) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Included / Release pending  
-[LuaFileSystem](https://github.com/dibyendumajumdar/ravi-filesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Included / Release pending
-[LuaSocket](https://github.com/dibyendumajumdar/ravi-luasocket) | LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet | Included / Release pending 
+[LPegLabel](https://github.com/dibyendumajumdar/ravi-lpeglabel) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Included  
+[LuaFileSystem](https://github.com/dibyendumajumdar/ravi-filesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Included
+[LuaSocket](https://github.com/dibyendumajumdar/ravi-luasocket) | LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet | Included 
 [luv](https://github.com/luvit/luv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Planned
-[lua-cjson](https://github.com/dibyendumajumdar/ravi-cjson) | Lua CJSON is a fast JSON encoding/parsing module for Lua | Included / Release pending
+[lua-cjson](https://github.com/dibyendumajumdar/ravi-cjson) | Lua CJSON is a fast JSON encoding/parsing module for Lua | Included
 [Torch7](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities, including a Unit Testing framework | Included
 [paths](https://github.com/dibyendumajumdar/ravi-torch-paths.git) | This package provides portable functions and variables to manipulate the file system; part of the Torch system. In future this may be moved inside the Torch package | Included
 [luaossl](https://github.com/wahern/luaossl) | Most comprehensive OpenSSL module in the Lua universe | Planned
@@ -100,47 +100,28 @@ Here we will build Ravi without LLVM:
 cd ravi-distro/ravi
 mkdir build
 cd build
-cmake -DSTATIC_BUILD=OFF -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
 make
 make install
 ```  
 
-* Build packages in following order. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi.
+* Build packages as follows. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi.
 
-* Build ravi-ffi
- 
-For example, on Ubuntu:
+* For each project do following steps:
 
 ```
-cd ravi-distro/ravi-ffi
+cd ravi-distro/<project-name>
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
-make
+cmake -DMAKE_INSTALL_PREFIX=$HOME/ravi ..
 make install
-```    
-  
-* Build ravi-torch-paths
-
 ```
-cd ravi-distro/ravi-torch-paths
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
-make
-make install
-```    
 
-* Build ravi-torch7
-
-```
-cd ravi-distro/ravi-torch7
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
-make
-make install
-```    
+* The projects should be built in following order:
+  - ravi-ffi
+  - ravi-torch-paths
+  - ravi-torch7
+  - followed by rest
   
 ### Setup environment
 

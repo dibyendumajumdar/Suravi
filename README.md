@@ -142,7 +142,7 @@ export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.
 export LUA_CPATH="$RAVI_HOME/lib/?.so;$RAVI_HOME/lib/lib?.so"
 ```
 
-### On Mac OSX
+#### On Mac OSX
 
 ```
 export RAVI_HOME=$HOME/ravi
@@ -152,7 +152,7 @@ export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.
 export LUA_CPATH="$RAVI_HOME/lib/?.dylib;$RAVI_HOME/lib/lib?.dylib"
 ```
 
-### On Windows
+#### On Windows
 
 ```
 set RAVI_HOME=c:\Software\ravi

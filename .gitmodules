@@ -32,3 +32,7 @@
 	path = ravi-filesystem
 	url = https://github.com/dibyendumajumdar/ravi-filesystem.git
 	branch = ravi-distro
+[submodule "ravi-penlight"]
+	path = ravi-penlight
+	url = https://github.com/dibyendumajumdar/ravi-penlight
+	branch = ravi-distro

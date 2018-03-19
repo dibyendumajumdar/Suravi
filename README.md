@@ -27,7 +27,7 @@ Library | Description | Status
 [luaossl](https://github.com/wahern/luaossl) | Most comprehensive OpenSSL module in the Lua universe | Planned
 [cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Planned
 [luaffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included
-[Penlight](https://github.com/stevedonovan/Penlight) | A set of pure Lua libraries focusing on input data handling (such as reading configuration files), functional programming (such as map, reduce, placeholder expressions,etc), and OS path management. Much of the functionality is inspired by the Python standard libraries | Planned
+[Penlight](https://github.com/stevedonovan/Penlight) | A set of pure Lua libraries focusing on input data handling (such as reading configuration files), functional programming (such as map, reduce, placeholder expressions,etc), and OS path management. Much of the functionality is inspired by the Python standard libraries | Included
 
 # Downloads
 
@@ -130,7 +130,7 @@ Once the distro is built, set environment variables appropriately for locating t
 - `PATH` on all platforms
 - `LD_LIBRARY_PATH` on Linux 
 - `DYLD_LIBRARY_PATH` on Mac OSX
-- `LUA_PATH` and `LUA_CPATH` must be set.
+- `LUA_PATH` and `LUA_CPATH` on all Platforms
 
 #### On Linux
 
@@ -142,6 +142,27 @@ export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.
 export LUA_CPATH="$RAVI_HOME/lib/?.so;$RAVI_HOME/lib/lib?.so"
 ```
 
+### On Mac OSX
+
+```
+export RAVI_HOME=$HOME/ravi
+export PATH=$RAVI_HOME/bin:$PATH
+export DYLD_LIBRARY_PATH=$RAVI_HOME/lib:$DYLD_LIBRARY_PATH
+export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua"
+export LUA_CPATH="$RAVI_HOME/lib/?.dylib;$RAVI_HOME/lib/lib?.dylib"
+```
+
+### On Windows
+
+```
+set RAVI_HOME=c:\Software\ravi
+set PATH=%RAVI_HOME%\bin;%PATH%
+set LUA_PATH=%RAVI_HOME%\share\lua\5.3\?.lua;%RAVI_HOME%\share\lua\5.3\?\init.lua;.\?.lua;.\?\init.lua
+set LUA_CPATH=%RAVI_HOME%\bin\?.dll
+```
+
 ### Testing the distro
 
 Each package in the distro must be tested.
+
+Note that some Penlight tests invoke 'lua' from inside the tests; for these tests to work in Ravi, you need to copy the ravi executable to the expected name.

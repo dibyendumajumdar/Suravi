@@ -36,3 +36,11 @@
 	path = ravi-penlight
 	url = https://github.com/dibyendumajumdar/ravi-penlight
 	branch = ravi-distro
+[submodule "ravi-moses"]
+	path = ravi-moses
+	url = https://github.com/dibyendumajumdar/ravi-moses.git
+	branch = ravi-distro
+[submodule "ravi-torch7-nn"]
+	path = ravi-torch7-nn
+	url = https://github.com/dibyendumajumdar/ravi-torch7-nn.git
+	branch = ravi-distro

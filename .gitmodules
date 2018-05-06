@@ -56,3 +56,7 @@
 	path = ravi-torch7-optim
 	url = https://github.com/dibyendumajumdar/ravi-torch7-optim.git
 	branch = ravi-distro
+[submodule "ravi-torch-cephes"]
+	path = ravi-torch-cephes
+	url = https://github.com/dibyendumajumdar/ravi-torch-cephes.git
+	branch = ravi-distro

@@ -44,3 +44,15 @@
 	path = ravi-torch7-nn
 	url = https://github.com/dibyendumajumdar/ravi-torch7-nn.git
 	branch = ravi-distro
+[submodule "ravi-torch7-sys"]
+	path = ravi-torch7-sys
+	url = https://github.com/dibyendumajumdar/ravi-torch7-sys.git
+	branch = ravi-distro
+[submodule "ravi-torch7-xlua"]
+	path = ravi-torch7-xlua
+	url = https://github.com/dibyendumajumdar/ravi-torch7-xlua.git
+	branch = ravi-distro
+[submodule "ravi-torch7-optim"]
+	path = ravi-torch7-optim
+	url = https://github.com/dibyendumajumdar/ravi-torch7-optim.git
+	branch = ravi-distro

@@ -122,7 +122,10 @@ make install
 * The projects should be built in following order:
   - ravi-ffi
   - ravi-torch-paths
+  - ravi-torch7-sys
   - ravi-torch7
+  - ravi-torch7-xlua
+  - ravi-moses
   - followed by rest
   
 ### Setup environment

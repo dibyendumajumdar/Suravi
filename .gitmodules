@@ -67,3 +67,7 @@
 	path = ravi-torch7-autograd
 	url = https://github.com/dibyendumajumdar/ravi-torch7-autograd.git
 	branch = ravi-distro
+[submodule "ravi-libuv-luv"]
+	path = ravi-libuv-luv
+	url = https://github.com/dibyendumajumdar/ravi-libuv-luv.git
+	branch = ravi-distro

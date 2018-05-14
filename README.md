@@ -20,12 +20,13 @@ Library | Description | Status
 [LPegLabel](https://github.com/dibyendumajumdar/ravi-lpeglabel) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Included  
 [LuaFileSystem](https://github.com/dibyendumajumdar/ravi-filesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Included
 [LuaSocket](https://github.com/dibyendumajumdar/ravi-luasocket) | LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet | Included 
-[luv](https://github.com/luvit/luv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Planned
+[luv](https://github.com/dibyendumajumdar/ravi-libuv-luv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | WIP
 [lua-cjson](https://github.com/dibyendumajumdar/ravi-cjson) | Lua CJSON is a fast JSON encoding/parsing module for Lua | Included
 [Moses](https://github.com/dibyendumajumdar/ravi-moses) | A Lua utility-belt library for functional programming | Included
 [Torch7](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities, including a Unit Testing framework | Included
 [Torch7-NN](https://github.com/dibyendumajumdar/ravi-torch7-nn) | This package provides an easy and modular way to build and train simple or complex neural networks using Torch | Included
 [Torch7-Optim](https://github.com/dibyendumajumdar/ravi-torch7-optim) | This package contains a number of optimization routines for  Torch | Included
+[Torch7-Autograd](https://github.com/dibyendumajumdar/ravi-torch7-autograd) | Autograd automatically differentiates native Torch code | WIP
 [Torch-Paths](https://github.com/dibyendumajumdar/ravi-torch-paths) | This package provides portable functions and variables to manipulate the file system; part of the Torch system. In future this may be moved inside the Torch package | Included
 [luaossl](https://github.com/wahern/luaossl) | Most comprehensive OpenSSL module in the Lua universe | Planned
 [cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Included
@@ -74,7 +75,7 @@ Configure OpenBLAS to be the default BLAS as follows:
 
 #### Install BLAS and LAPACK on Windows 10
 
-On Windows you can use pre-built libraries I provide in [Ravi Distro Dependencies](https://github.com/dibyendumajumdar/ravi-external-libs).
+On Windows you can use pre-built libraries I provide in ravi-external-libs project.
 
 ### Build process
 
@@ -127,6 +128,7 @@ make install
   - ravi-torch7
   - ravi-torch7-xlua
   - ravi-moses
+  - ravi-torch7-nn
   - followed by rest
   
 ### Setup environment

@@ -27,7 +27,6 @@ Library | Description | Status
 [Torch7-NN](https://github.com/dibyendumajumdar/ravi-torch7-nn) | This package provides an easy and modular way to build and train simple or complex neural networks using Torch | Included
 [Torch7-Optim](https://github.com/dibyendumajumdar/ravi-torch7-optim) | This package contains a number of optimization routines for  Torch | Included
 [Torch7-Autograd](https://github.com/dibyendumajumdar/ravi-torch7-autograd) | Autograd automatically differentiates native Torch code | WIP
-[Torch-Paths](https://github.com/dibyendumajumdar/ravi-torch-paths) | This package provides portable functions and variables to manipulate the file system; part of the Torch system. In future this may be moved inside the Torch package | Included
 [luaossl](https://github.com/wahern/luaossl) | Most comprehensive OpenSSL module in the Lua universe | Planned
 [cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Included
 [luaffi](https://github.com/dibyendumajumdar/ravi-ffi) | Based on luaffi/luaffifb, this library provides a LuaJIT FFI interface for stock Lua 5.3 / Ravi | Included
@@ -109,36 +108,21 @@ make
 make install
 ```  
 
-* Build packages as follows. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi.
+* Install the ravi-external-libs project if you are on Windows. You can also install this project on Linux or Mac OSX; on
+those platforms it simply installs an environment script.
 
-* For each project do following steps:
-
-```
-cd ravi-distro/<project-name>
-mkdir build
-cd build
-cmake -DMAKE_INSTALL_PREFIX=$HOME/ravi ..
-make install
-```
-
-* The projects should be built in following order:
-  - ravi-ffi
-  - ravi-torch-paths
-  - ravi-torch7-sys
-  - ravi-torch7
-  - ravi-torch7-xlua
-  - ravi-moses
-  - ravi-torch7-nn
-  - followed by rest
-  
 ### Setup environment
 
-Once the distro is built, set environment variables appropriately for locating the distro. You will need to set:
+Set environment variables appropriately for locating the distro. You will need to set:
 
 - `PATH` on all platforms
 - `LD_LIBRARY_PATH` on Linux 
 - `DYLD_LIBRARY_PATH` on Mac OSX
 - `LUA_PATH` and `LUA_CPATH` on all Platforms
+
+In the examples below, replace 'ravi' with 'lua53' for Lua based installation.
+
+Note that the ravi-external-libs project installs 'ravienv.sh' and 'luaenv.sh' scripts that essentially do below.
 
 #### On Linux
 
@@ -169,6 +153,28 @@ set LUA_PATH=%RAVI_HOME%\share\lua\5.3\?.lua;%RAVI_HOME%\share\lua\5.3\?\init.lu
 set LUA_CPATH=%RAVI_HOME%\bin\?.dll
 ```
 
+* Build packages as follows. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi.
+
+* For each project do following steps:
+
+```
+cd ravi-distro/<project-name>
+mkdir build
+cd build
+cmake -DMAKE_INSTALL_PREFIX=$HOME/ravi ..
+make install
+```
+
+* The projects should be built in following order:
+  - ravi-ffi
+  - ravi-torch-paths
+  - ravi-torch7-sys
+  - ravi-torch7
+  - ravi-torch7-xlua
+  - ravi-moses
+  - ravi-torch7-nn
+  - followed by rest
+  
 ### Testing the distro
 
 Each package in the distro must be tested.

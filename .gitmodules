@@ -60,3 +60,10 @@
 	path = ravi-torch-cephes
 	url = https://github.com/dibyendumajumdar/ravi-torch-cephes.git
 	branch = ravi-distro
+[submodule "ravi-external-libs"]
+	path = ravi-external-libs
+	url = https://github.com/dibyendumajumdar/ravi-external-libs.git
+[submodule "ravi-torch7-autograd"]
+	path = ravi-torch7-autograd
+	url = https://github.com/dibyendumajumdar/ravi-torch7-autograd.git
+	branch = ravi-distro

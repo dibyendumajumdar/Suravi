@@ -78,6 +78,14 @@ cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 
 cmake --build . --config Release --target INSTALL
 cd ..\..
 
+cd ravi-torch7-autograd
+rmdir build /s
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 15 2017 Win64" ..
+cmake --build . --config Release --target INSTALL
+cd ..\..
+
 cd ravi-torch-cephes
 rmdir build /s
 mkdir build

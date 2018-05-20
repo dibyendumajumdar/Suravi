@@ -1,4 +1,4 @@
-# Ravi / Lua Ditribution
+# Ravi / Lua Distribution
 
 ## Packages
 

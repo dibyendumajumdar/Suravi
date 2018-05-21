@@ -1,9 +1,3 @@
-# Ravi / Lua Distribution
-
-
-
-
-
 <a name="torch.reference.dok"></a>
 # Torch Package Reference Manual #
 
@@ -32,5 +26,4 @@ useful utilities.
     * [CmdLine](t7cmdline.md) is a command line argument parsing utility.
     * [Random](t7random.md) defines a random number generator package with various distributions.
     * Finally useful [utility](t7utility.md) functions are provided for easy handling of torch tensor types and class inheritance.
-
 

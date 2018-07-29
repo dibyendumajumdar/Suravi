@@ -71,3 +71,7 @@
 	path = ravi-libuv-luv
 	url = https://github.com/dibyendumajumdar/ravi-libuv-luv.git
 	branch = ravi-distro
+[submodule "nj"]
+	path = nj
+	url = https://github.com/dibyendumajumdar/nj.git
+	branch = ravi-distro

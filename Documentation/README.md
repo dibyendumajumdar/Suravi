@@ -58,8 +58,16 @@ This package provides an easy and modular way to build and train simple or compl
     * [Training](t7nntraining.md#nn.traningneuralnet.dok) : how to train a neural network using [StochasticGradient](t7nntraining.md#nn.StochasticGradient);
     * [Testing](t7nntesting.md) : how to test your modules.
 
+<a name='optim.dok'></a>
+# Optimization package
+
+This package contains several optimization routines and a logger for [Torch](https://github.com/dibyendumajumdar/ravi-torch7):
+
+ * [Overview](t7optimintro.md);
+ * [Optimization algorithms](t7optimalgos.md);
+ * [Logger](t7optimlogger.md).
 
 <a name="autograd.dok"></a>
 # AutoGrad package #
 
-[Autograd](t7autograd.md) provide automatic differentiation of [Torch](https://github.com/dibyendumajumdar/ravi-torch7) expressions
+The [Autograd](t7autograd.md) package provide automatic differentiation of [Torch](https://github.com/dibyendumajumdar/ravi-torch7) expressions

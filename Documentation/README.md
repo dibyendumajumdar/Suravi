@@ -57,3 +57,9 @@ This package provides an easy and modular way to build and train simple or compl
     * [Overview](t7nnoverview.md#nn.overview.dok) of the package essentials including modules, containers and training;
     * [Training](t7nntraining.md#nn.traningneuralnet.dok) : how to train a neural network using [StochasticGradient](t7nntraining.md#nn.StochasticGradient);
     * [Testing](t7nntesting.md) : how to test your modules.
+
+
+<a name="autograd.dok"></a>
+# AutoGrad package #
+
+[Autograd](t7autograd.md) provide automatic differentiation of [Torch](https://github.com/dibyendumajumdar/ravi-torch7) expressions

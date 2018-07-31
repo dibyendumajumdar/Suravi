@@ -148,8 +148,8 @@ It will look something like this:
 ### Training ###
 
 Now that we have created our model, our training set, and prepared the flattened network parameters, we can train using `optim`.
-`optim` provides [various training algorithms](doc/index.md).
-We will use the stochastic gradient descent algorithm [SGD](doc/index.md#x-sgdopfunc-x-state).
+`optim` provides [various training algorithms](doc/t7optimalgos.md).
+We will use the stochastic gradient descent algorithm [SGD](doc/t7optimalgos.md#x-sgdopfunc-x-state).
 We need to provide the learning rate, via an optimization state table:
 
 ```lua

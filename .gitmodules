@@ -76,3 +76,7 @@
 	path = nj
 	url = https://github.com/dibyendumajumdar/nj.git
 	branch = ravi-distro
+[submodule "ravi-protobuf"]
+	path = ravi-protobuf
+	url = https://github.com/dibyendumajumdar/ravi-protobuf.git
+	branch = ravi-distro

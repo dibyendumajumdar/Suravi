@@ -177,3 +177,13 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
 cd ..\..
+
+cd ravi-protobuf
+rmdir build /s /q
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 15 2017 Win64" ..
+if %errorlevel% neq 0 exit /b %errorlevel%
+cmake --build . --config Release --target INSTALL
+if %errorlevel% neq 0 exit /b %errorlevel%
+cd ..\..

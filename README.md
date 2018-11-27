@@ -48,12 +48,12 @@ The version of Lua supported by this distro is 5.3. The following changes were m
 - The Lua 5.1 and 5.2 compatibility flags are enabled
 
 
-#### On Linux or Mac OSX
+## On Linux or Mac OSX
 
 * Install under `$HOME/ravi` or `$HOME/lua53`. 
 * Set environment variables as follows
 ```
-source $HOME/ravi/bin/ravienv.sh
+   source $HOME/ravi/bin/ravienv.sh
 ```
 Replace `ravi` with `lua53` if you are using Lua.
 
@@ -62,7 +62,7 @@ Note that if you install at some other location then you need to change the path
 * `bin/ravienv.sh` or `bin/luaenv.sh`
 * `share/lua/5.3/torch/paths.lua`
 
-#### On Windows
+## On Windows
 
 * Install under `c:\Software\ravi` or `c:\Software\lua53`
 * Set environment variables as follows

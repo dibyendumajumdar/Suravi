@@ -1,6 +1,7 @@
 # Build instructions
 
-There are simple build scripts available for Windows 10, Mac OSX and Linux. If you wish to manually build then here are some details.
+* Very simple build scripts are in https://github.com/dibyendumajumdar/ravi-distro/tree/master/build.
+* If you wish to manually build then below are some details.
 
 ### External dependencies
 
@@ -73,3 +74,6 @@ Set environment variables appropriately for locating the distro. You will need t
 In the examples below, replace 'ravi' with 'lua53' for Lua based installation.
 
 Note that the ravi-external-libs project installs 'ravienv.sh' and 'luaenv.sh' scripts that essentially do below.
+
+
+

@@ -41,12 +41,11 @@ See the Releases page for available downloads.
 # Installation
 
 ## Lua Version and Build Info
-The version of Lua supported by this distro is 5.3. The following changes were made to stock Lua:
+The version of Lua supported by this distro is 5.3.5. The following changes were made to stock Lua:
 
-- The LuaJIT bit library is included
+- The LuaJIT `bit` library is included
 - The `LUA_COMPAT_FLOATSTRING` flag is enabled
 - The Lua 5.1 and 5.2 compatibility flags are enabled
-
 
 ## On Linux or Mac OSX
 

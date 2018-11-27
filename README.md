@@ -36,10 +36,9 @@ Library | Description | Status
 
 # Downloads
 
-See the Releases page for available downloads.
+See the Releases page for available downloads. 
 
-# Build Instructions
-The distro is still under development and is not ready for use yet. However, as support gets added for the libraries above, interim alpha-releases will be made available.
+# Installation
 
 ## Lua Version and Build Info
 The version of Lua supported by this distro is 5.3. The following changes were made to stock Lua:
@@ -48,129 +47,32 @@ The version of Lua supported by this distro is 5.3. The following changes were m
 - The `LUA_COMPAT_FLOATSTRING` flag is enabled
 - The Lua 5.1 and 5.2 compatibility flags are enabled
 
-## Ravi Version and Build Info
-The plan is to have LLVM enabled in the Ravi build, although currently this is not done.
 
-## Notes on Building the Distribution
-These are incomplete notes.
+#### On Linux or Mac OSX
 
-### External dependencies
-
-* BLAS and LAPACK libraries are needed. 
-* CMake is used as the build system
-
-#### Installing BLAS / LAPACK on Ubuntu 16.x
-
-For information on how to install and configure BLAS and LAPACK refer to information at [DebianScience Wiki](http://wiki.debian.org/DebianScience/LinearAlgebraLibraries).
-
-Install OpenBLAS as follows:
+* Install under `$HOME/ravi` or `$HOME/lua53`. 
+* Set environment variables as follows
 ```
-  sudo apt-get install libopenblas-dev
+source $HOME/ravi/bin/ravienv.sh
 ```
-Above should also install LAPACK.
-Configure OpenBLAS to be the default BLAS as follows:
-```
-  sudo update-alternatives --config libblas.so.3
-  sudo update-alternatives --config liblapack.so.3
-```
+Replace `ravi` with `lua53` if you are using Lua.
 
-#### Install BLAS and LAPACK on Windows 10
+Note that if you install at some other location then you need to change the paths in following files in the distro:
 
-On Windows you can use pre-built libraries I provide in ravi-external-libs project.
-
-### Build process
-
-This is manual at present.
-
-* Decide on the home folder for the distro. The distro assumes the following locations for these, if you change these then you will need to amend the `FindLua.cmake` scripts in all the projects.
-  - `c:/Software/lua53` or `c:/Software/ravi` on Windows
-  - `~/lua53` or `~/ravi` on Unix systems
-
-* Clone the respository and update the submodules.
-```
-git clone https://github.com/dibyendumajumdar/ravi-distro.git
-cd ravi-distro
-git submodule update --init --recursive
-```
-
-* Install Lua 5.3 or Ravi first. Ensure that `-DCMAKE_INSTALL_PREFIX` is defined as above. If you did not use the default location above then you will need to amend the `FindLua.cmake` scripts in all the projects.
-
-For example, on Ubuntu, follow these steps to build and install Ravi.
-But first, in case you don't have readline installed:
-```
-sudo apt-get install libreadline6 libreadline6-dev
-```
-Here we will build Ravi without LLVM:
-```
-cd ravi-distro/ravi
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=$HOME/ravi ..
-make
-make install
-```  
-
-* Install the ravi-external-libs project if you are on Windows. You can also install this project on Linux or Mac OSX; on
-those platforms it simply installs an environment script.
-
-### Setup environment
-
-Set environment variables appropriately for locating the distro. You will need to set:
-
-- `PATH` on all platforms
-- `LD_LIBRARY_PATH` on Linux 
-- `DYLD_LIBRARY_PATH` on Mac OSX
-- `LUA_PATH` and `LUA_CPATH` on all Platforms
-
-In the examples below, replace 'ravi' with 'lua53' for Lua based installation.
-
-Note that the ravi-external-libs project installs 'ravienv.sh' and 'luaenv.sh' scripts that essentially do below.
-
-#### On Linux
-
-```
-export RAVI_HOME=$HOME/ravi
-export PATH=$RAVI_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$RAVI_HOME/lib:$LD_LIBRARY_PATH
-export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua"
-export LUA_CPATH="$RAVI_HOME/lib/?.so;$RAVI_HOME/lib/lib?.so"
-```
-
-#### On Mac OSX
-
-```
-export RAVI_HOME=$HOME/ravi
-export PATH=$RAVI_HOME/bin:$PATH
-export DYLD_LIBRARY_PATH=$RAVI_HOME/lib:$DYLD_LIBRARY_PATH
-export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua"
-export LUA_CPATH="$RAVI_HOME/lib/?.dylib;$RAVI_HOME/lib/lib?.dylib"
-```
+* `bin/ravienv.sh` or `bin/luaenv.sh`
+* `share/lua/5.3/torch/paths.lua`
 
 #### On Windows
 
+* Install under `c:\Software\ravi` or `c:\Software\lua53`
+* Set environment variables as follows
 ```
-set RAVI_HOME=c:\Software\ravi
-set PATH=%RAVI_HOME%\bin;%PATH%
-set LUA_PATH=%RAVI_HOME%\share\lua\5.3\?.lua;%RAVI_HOME%\share\lua\5.3\?\init.lua;.\?.lua;.\?\init.lua
-set LUA_CPATH=%RAVI_HOME%\bin\?.dll
+c:\Software\ravi\bin\ravienv.bat
 ```
+Replace `ravi` with `lua53` if you are using Lua.
 
-* Build packages as follows. Note that you need to supply `-DUSE_LUA53=ON` to CMake if you are building for Lua 5.3. Default is to build for Ravi.
+Note that if you install at some other location then you need to change the paths in following files in the distro:
 
-* For each project do following steps:
+* `bin\ravienv.bat` or `bin\luaenv.bat`
+* `share\lua\5.3\torch\paths.lua`
 
-```
-cd ravi-distro/<project-name>
-mkdir build
-cd build
-cmake -DMAKE_INSTALL_PREFIX=$HOME/ravi ..
-make install
-```
-
-* Very simple build scripts are in https://github.com/dibyendumajumdar/ravi-distro/tree/master/build
-  
-### Testing the distro
-
-Each package in the distro must be tested.
-
-Note that some Penlight tests invoke 'lua' from inside the tests; for these tests to work in Ravi, you need to copy the ravi executable to the expected name.

@@ -80,3 +80,7 @@
 	path = ravi-protobuf
 	url = https://github.com/dibyendumajumdar/ravi-protobuf.git
 	branch = ravi-distro
+[submodule "ravi-luaossl"]
+	path = ravi-luaossl
+	url = https://github.com/dibyendumajumdar/ravi-luaossl.git
+	branch = ravi-distro

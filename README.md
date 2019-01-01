@@ -1,6 +1,6 @@
-# A Distribution of Lua / Ravi 5.3
+# Suravi is a distribution of Lua 5.3 and Ravi
 
-This is currently work-in-progress distribution of Lua / Ravi 5.3.
+Suravi is a work-in-progress distribution of [Lua 5.3](www.lua.org) and [Ravi](https://github.com/dibyendumajumdar/ravi)
 
 ## Goals
 

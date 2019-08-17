@@ -37,8 +37,8 @@ This is manual at present.
 
 * Clone the respository and update the submodules.
 ```
-git clone https://github.com/dibyendumajumdar/ravi-distro.git
-cd ravi-distro
+git clone https://github.com/dibyendumajumdar/Suravi.git
+cd Suravi
 git submodule update --init --recursive
 ```
 

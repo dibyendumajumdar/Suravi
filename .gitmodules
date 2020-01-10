@@ -6,6 +6,9 @@
 	path = ravi
 	url = https://github.com/dibyendumajumdar/ravi.git
 	branch = ravi-distro
+[submodule "ravi-ffi"]
+	path = ravi-ffi
+	url = https://github.com/dibyendumajumdar/ravi-ffi.git
 [submodule "ravi-torch-paths"]
 	path = ravi-torch-paths
 	url = https://github.com/dibyendumajumdar/ravi-torch-paths.git

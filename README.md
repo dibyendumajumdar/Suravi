@@ -25,7 +25,6 @@ Library | Description | Status
 [luaossl](https://github.com/dibyendumajumdar/ravi-luaossl) | Lua OpenSSL is a complete binding for openssl | WIP
 [luv](https://github.com/dibyendumajumdar/ravi-libuv-luv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Included
 [Moses](https://github.com/dibyendumajumdar/ravi-moses) | A Lua utility-belt library for functional programming | Included
-[nj](https://github.com/dibyendumajumdar/nj) | A JIT backend for Ravi based on [Eclipse OMR project](https://github.com/eclipse/omr) | Included
 [Penlight](https://github.com/dibyendumajumdar/ravi-penlight) | A set of pure Lua libraries focusing on input data handling (such as reading configuration files), functional programming (such as map, reduce, placeholder expressions,etc), and OS path management. Much of the functionality is inspired by the Python standard libraries | Included
 [Torch7](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities, including a Unit Testing framework | Included
 [Torch7-Autograd](https://github.com/dibyendumajumdar/ravi-torch7-autograd) | Autograd automatically differentiates native Torch code | Included
@@ -46,6 +45,8 @@ The version of Lua supported by this distro is 5.3.5. The following changes were
 - The LuaJIT `bit` library is included
 - The `LUA_COMPAT_FLOATSTRING` flag is enabled
 - The Lua 5.1 and 5.2 compatibility flags are enabled
+- The 'defer' statement has been added.
+- The Lua parser has been enhanced to ignore Ravi type annotations.
 
 ## On Linux or Mac OSX
 

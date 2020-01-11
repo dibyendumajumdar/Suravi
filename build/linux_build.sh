@@ -6,5 +6,5 @@ export LUA_CPATH="$RAVI_HOME/lib/?.so;$RAVI_HOME/lib/lib?.so"
 
 for dir in ravi-external-libs ravi ravi-cjson ravi-filesystem ravi-lpeglabel ravi-luasocket ravi-moses ravi-penlight ravi-torch-paths ravi-torch7-sys ravi-torch7 ravi-torch7-xlua ravi-torch7-nn ravi-torch7-optim ravi-torch7-autograd ravi-torch-cephes ravi-libuv-luv ravi-protobuf ravi-luaossl; do
 	echo "Building $dir"
-	cd $dir && rm -rf build && mkdir build && cd build && cmake -DMIR_JIT=ON -DCMAKE_INSTALL_PREFIX=$RAVI_HOME .. && make install && cd ../..
+	cd $dir && rm -rf build && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=$RAVI_HOME .. && make install && cd ../..
 done

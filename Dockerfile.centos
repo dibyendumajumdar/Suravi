@@ -1,0 +1,25 @@
+FROM centos:7
+
+RUN set -x && \
+    yum -y update && \
+    yum -y install epel-release && \
+    yum -y install readline-devel openblas-devel openssl-devel lapack-devel libuv-devel libgomp && \
+    yum clean all
+
+
+RUN set -x && \
+    yum -y install git && \
+    mkdir -p ${HOME}/sources && \
+    cd ${HOME}/sources && \
+    git clone https://github.com/dibyendumajumdar/Suravi.git && \
+    cd ${HOME}/sources/Suravi && \
+    git submodule update --init --recursive && \
+    yum -y install cmake3 && \
+    yum -y install centos-release-scl && \
+    yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++ make && \
+    cd ${HOME}/sources/Suravi && \
+    scl enable devtoolset-8 -- bash build/centos_build.sh && \
+    rm -rf ${HOME}/sources/ && \
+    yum -y remove devtoolset-8-gcc devtoolset-8-gcc-c++ make && \
+    yum -y remove cmake3 git && \
+    yum clean all

@@ -1,0 +1,15 @@
+FROM alpine:latest
+
+RUN set -x \
+    apk add --no-cache libstdc++ \
+    && apk add --no-cache --virtual .build-deps git build-base libtool curl make cmake \
+    && apk add --no-cache openblas-dev readline-dev openssl-dev libgomp libuv-dev \
+    && mkdir /sources \
+    && cd /sources \
+    && git clone https://github.com/dibyendumajumdar/Suravi.git \
+    && cd /sources/Suravi \
+    && git submodule update --init --recursive \
+    && sh build/linux_build.sh \
+    && rm -rf /sources \
+    && apk del .build-deps
+

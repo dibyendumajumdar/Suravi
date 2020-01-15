@@ -9,9 +9,8 @@ RUN set -x \
     && apt-get install -y git wget zlib1g-dev cmake g++ \
     && mkdir -p ${HOME}/sources \
     && cd ${HOME}/sources \
-    && git clone https://github.com/dibyendumajumdar/Suravi.git \
+    && git clone --recurse-submodules https://github.com/dibyendumajumdar/Suravi.git \
     && cd ${HOME}/sources/Suravi \
-    && git submodule update --init --recursive \
     && sh build/linux_build.sh \
     && rm -rf ${HOME}/sources \
     && apt-get remove -y --purge git wget cmake g++ \

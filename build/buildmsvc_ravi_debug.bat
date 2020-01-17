@@ -1,13 +1,3 @@
-cd nj
-rmdir build /s /q
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/ravi -G "Visual Studio 16 2019" ..
-if %errorlevel% neq 0 exit /b %errorlevel%
-cmake --build . --config Debug --target INSTALL
-if %errorlevel% neq 0 exit /b %errorlevel%
-cd ..\..
-
 cd ravi-external-libs
 rmdir build /s /q
 mkdir build
@@ -24,7 +14,7 @@ cd ravi
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DOMR_JIT=ON -DCMAKE_INSTALL_PREFIX=c:/Software/ravi -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/ravi -G "Visual Studio 16 2019" ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Debug --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%

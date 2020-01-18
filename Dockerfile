@@ -11,9 +11,16 @@ RUN set -x \
     && cd ${HOME}/sources \
     && git clone --recurse-submodules https://github.com/dibyendumajumdar/Suravi.git \
     && cd ${HOME}/sources/Suravi \
-    && sh build/linux_build.sh \
+    && mkdir /Software \
+    && sh build/linux_build.sh /Software/ravi \
     && rm -rf ${HOME}/sources \
     && apt-get remove -y --purge git wget cmake g++ \
     && apt-get autoremove -y \
     && apt-get autoclean 
 
+ENV PATH /Software/ravi/bin:${PATH}
+ENV LD_LIBRARY_PATH /Software/ravi/lib:${LD_LIBRARY_PATH}
+ENV LUA_PATH /Software/ravi/share/lua/5.3/?.lua;/Software/ravi/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua
+ENV LUA_CPATH /Software/ravi/lib/?.so;/Software/ravi/lib/lib?.so
+
+WORKDIR /Software/ravi

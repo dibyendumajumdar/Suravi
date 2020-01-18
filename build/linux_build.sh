@@ -1,4 +1,9 @@
-export RAVI_HOME=$HOME/ravi
+if (( $# != 1 )); then
+    echo "Supply the installation path"
+	exit 1
+fi
+
+export RAVI_HOME=$1
 export PATH="$RAVI_HOME/bin:$PATH"
 export LD_LIBRARY_PATH="$RAVI_HOME/lib:$LD_LIBRARY_PATH"
 export LUA_PATH="$RAVI_HOME/share/lua/5.3/?.lua;$RAVI_HOME/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua"

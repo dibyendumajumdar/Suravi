@@ -53,27 +53,30 @@ The version of Lua supported by this distro is 5.3.5. The following changes were
 * Install under `$HOME/ravi` or `$HOME/lua53`. 
 * Set environment variables as follows
 ```
-   source $HOME/ravi/bin/ravienv.sh
+   source $HOME/ravi/bin/ravi-env.sh
 ```
 Replace `ravi` with `lua53` if you are using Lua.
 
 Note that if you install at some other location then you need to change the paths in following files in the distro:
 
-* `bin/ravienv.sh` or `bin/luaenv.sh`
+* `bin/ravi-env.sh` or `bin/lua-env.sh`
 * `share/lua/5.3/torch/paths.lua`
 
 ## On Windows
 
-* _Note: You need to have the Visual C++ 2017 runtime distributable installed_
+* _Note: The latest build includes VC++ 2019 runtime distributable_
 * Install under `c:\Software\ravi` or `c:\Software\lua53`
 * Set environment variables as follows
 ```
-c:\Software\ravi\bin\ravienv.bat
+c:\Software\ravi\bin\ravi-env.bat
 ```
 Replace `ravi` with `lua53` if you are using Lua.
 
 Note that if you install at some other location then you need to change the paths in following files in the distro:
 
-* `bin\ravienv.bat` or `bin\luaenv.bat`
+* `bin\ravi-env.bat` or `bin\lua-env.bat`
 * `share\lua\5.3\torch\paths.lua`
 
+## Docker support
+
+Please checkout the Dockerfiles in the repo - they should be self explanatory. 

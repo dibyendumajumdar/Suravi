@@ -3,7 +3,7 @@
 <a name="penlight.dok"></a>
 # Penlight #
 
- * [Introduction](pl01introduction.md)
+ * [Introduction](pl01-introduction.md)
  * [Tables and arrays](pl02-arrays.md) 
  * [Higher-level operations on strings](pl03-strings.md) 
  * [Paths and Directories](pl04-paths.md) 

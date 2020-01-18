@@ -1,4 +1,6 @@
-if (( $# != 1 )); then
+#!/bin/sh
+
+if [ "$#" -ne 1 ] ; then
     echo "Supply the installation path"
 	exit 1
 fi

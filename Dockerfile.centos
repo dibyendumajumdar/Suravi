@@ -11,15 +11,20 @@ RUN set -x && \
     yum -y install git && \
     mkdir -p ${HOME}/sources && \
     cd ${HOME}/sources && \
-    git clone https://github.com/dibyendumajumdar/Suravi.git && \
-    cd ${HOME}/sources/Suravi && \
-    git submodule update --init --recursive && \
+    git clone --recurse-submodules https://github.com/dibyendumajumdar/Suravi.git && \
     yum -y install cmake3 && \
     yum -y install centos-release-scl && \
     yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++ make && \
     cd ${HOME}/sources/Suravi && \
-    scl enable devtoolset-8 -- bash build/centos_build.sh && \
+    scl enable devtoolset-8 -- bash build/centos_build.sh /Software/ravi && \
     rm -rf ${HOME}/sources/ && \
     yum -y remove devtoolset-8-gcc devtoolset-8-gcc-c++ make && \
     yum -y remove cmake3 git && \
     yum clean all
+
+ENV PATH /Software/ravi/bin:${PATH}
+ENV LD_LIBRARY_PATH /Software/ravi/lib64:${LD_LIBRARY_PATH}
+ENV LUA_PATH /Software/ravi/share/lua/5.3/?.lua;/Software/ravi/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua
+ENV LUA_CPATH /Software/ravi/lib64/?.so;/Software/ravi/lib64/lib?.so
+
+WORKDIR /Software/ravi

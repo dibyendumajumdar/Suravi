@@ -19,6 +19,11 @@
  * [LPeg](lpeg.md) - Parsing Expression Grammars For Lua
  * [LPegLabel](lpeglabel.md) - Parsing Expression Grammars (with Labels) for Lua 
 
+<a name="luv.dok"></a>
+# LibUV #
+
+* [luv](luv.md) - Low level interface to `libuv`
+
 <a name="torch.reference.dok"></a>
 # Torch Package Reference Manual #
 

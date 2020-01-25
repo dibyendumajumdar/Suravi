@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:19.04
 
 RUN set -x \
     && apt-get update \
@@ -19,8 +19,8 @@ RUN set -x \
     && apt-get autoclean 
 
 ENV PATH /Software/ravi/bin:${PATH}
-ENV LD_LIBRARY_PATH /Software/ravi/lib64:${LD_LIBRARY_PATH}
+ENV LD_LIBRARY_PATH /Software/ravi/lib:${LD_LIBRARY_PATH}
 ENV LUA_PATH /Software/ravi/share/lua/5.3/?.lua;/Software/ravi/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua
-ENV LUA_CPATH /Software/ravi/lib64/?.so;/Software/ravi/lib64/lib?.so
+ENV LUA_CPATH /Software/ravi/lib/?.so;/Software/ravi/lib/lib?.so
 
 WORKDIR /Software/ravi

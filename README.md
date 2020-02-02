@@ -28,7 +28,7 @@ Library | Description | Status
 [Penlight](https://github.com/dibyendumajumdar/ravi-penlight) | A set of pure Lua libraries focusing on input data handling (such as reading configuration files), functional programming (such as map, reduce, placeholder expressions,etc), and OS path management. Much of the functionality is inspired by the Python standard libraries | Included
 [Torch7](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities, including a Unit Testing framework | Included
 [Torch7-Autograd](https://github.com/dibyendumajumdar/ravi-torch7-autograd) | Autograd automatically differentiates native Torch code | Included
-[Torch-Cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Included
+[Torch-Cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Broken 
 [Torch7-NN](https://github.com/dibyendumajumdar/ravi-torch7-nn) | This package provides an easy and modular way to build and train simple or complex neural networks using Torch | Included
 [Torch7-Optim](https://github.com/dibyendumajumdar/ravi-torch7-optim) | This package contains a number of optimization routines for  Torch | Included
 

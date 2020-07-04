@@ -4,12 +4,18 @@ RUN set -x \
     apk add --no-cache libstdc++ \
     && apk add --no-cache --virtual .build-deps git build-base libtool curl make cmake \
     && apk add --no-cache openblas-dev readline-dev openssl-dev libgomp libuv-dev \
-    && mkdir /sources \
-    && cd /sources \
-    && git clone https://github.com/dibyendumajumdar/Suravi.git \
-    && cd /sources/Suravi \
-    && git submodule update --init --recursive \
-    && sh build/linux_build.sh \
-    && rm -rf /sources \
+    && mkdir /Software \
+    && mkdir -p ${HOME}/sources \
+    && cd ${HOME}/sources \
+    && git clone --recurse-submodules https://github.com/dibyendumajumdar/Suravi.git \
+    && cd ${HOME}/sources/Suravi \
+    && sh build/linux_build.sh /Software/ravi \
+    && rm -rf ${HOME}/sources \
     && apk del .build-deps
 
+ENV PATH /Software/ravi/bin:${PATH}
+ENV LD_LIBRARY_PATH /Software/ravi/lib64:${LD_LIBRARY_PATH}
+ENV LUA_PATH /Software/ravi/share/lua/5.3/?.lua;/Software/ravi/share/lua/5.3/?/init.lua;./?.lua;./?/init.lua
+ENV LUA_CPATH /Software/ravi/lib/?.so;/Software/ravi/lib/lib?.so
+
+WORKDIR /Software/ravi

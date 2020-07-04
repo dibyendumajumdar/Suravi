@@ -1,7 +1,9 @@
-FROM ubuntu:19.04
+FROM ubuntu:20.04
 
 RUN set -x \
     && apt-get update \
+    # install tzdata to avoid interaction?
+    && apt-get install -y tzdata \
     # Install dependencies for Ravi, Torch, luaossl
     # libgomp1 is OpenMP library needed by Torch
     && apt-get install -y libopenblas-dev libreadline-dev libuv1-dev libssl-dev libgomp1 \

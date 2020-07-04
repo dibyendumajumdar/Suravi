@@ -7,11 +7,11 @@ cd ravi-cjson\tests
 ravi test.lua
 cd ..\..
 
-cd ravi\ravi-tests
+cd ravi\tests\language
 ravi ravi_tests1.ravi
 cd ..\..
 
-cd ravi\lua-tests
+cd ravi\tests\lua53
 ravi -e"_port=1" all.lua
 cd ..\..
 

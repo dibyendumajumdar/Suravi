@@ -9,11 +9,12 @@ cd ..\..
 
 cd ravi\tests\language
 ravi ravi_tests1.ravi
-cd ..\..
+ravi defer_tests.ravi
+cd ..\..\..
 
 cd ravi\tests\lua53
 ravi -e"_port=1" all.lua
-cd ..\..
+cd ..\..\..
 
 cd ravi-torch7\test
 ravi -ltorch -e "t=torch.test(); if t.errors[1] then os.exit(1) end" 

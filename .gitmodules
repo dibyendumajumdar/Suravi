@@ -5,7 +5,7 @@
 [submodule "ravi"]
 	path = ravi
 	url = https://github.com/dibyendumajumdar/ravi.git
-	branch = ravi-distro
+	branch = master
 [submodule "ravi-torch-paths"]
 	path = ravi-torch-paths
 	url = https://github.com/dibyendumajumdar/ravi-torch-paths.git

@@ -1,13 +1,13 @@
 # Suravi is a distribution of Lua 5.3 and Ravi
 
-Suravi is a work-in-progress distribution of [Lua 5.3](www.lua.org) and [Ravi](https://github.com/dibyendumajumdar/ravi)
+Suravi is a work-in-progress distribution of [Lua 5.3](www.lua.org) and [Ravi](https://github.com/dibyendumajumdar/ravi).
 
 ## Goals
 
 * This is *not* a comprehensive distribution / package manager for Lua such as [LuaRocks](https://luarocks.org/), [LuaDist](http://luadist.org/), or [LuaPlus](https://github.com/jjensen/luaplus51-all).
 * The goal of this distribution is to create a *small* distro with carefully selected libraries, and ensure that the distro has been tested as a whole.
-* There will separate binary downloads for Lua and Ravi 5.3
-* Target platforms are Windows 10, Linux, and Mac OSX; 64-bit versions only
+* There will be separate binary downloads for Lua and Ravi 5.3.
+* Target platforms are Windows 10, Linux, and Mac OSX; 64-bit versions only.
 * The build system is CMake; and the aim is to keep each module as independent of other modules as possible; however some modules such as those from Torch have interdependencies.
 * Create unified documentation and user guides; the whole distro should feel like a single product.
 
@@ -51,7 +51,7 @@ The version of Lua supported by this distro is 5.3.5. The following changes were
 ## On Linux or Mac OSX
 
 * Install under `$HOME/ravi` or `$HOME/lua53`. 
-* Set environment variables as follows
+* Set environment variables as follows:
 ```
    source $HOME/ravi/bin/ravi-env.sh
 ```
@@ -66,13 +66,13 @@ Note that if you install at some other location then you need to change the path
 
 * _Note: The latest build includes VC++ 2019 runtime distributable_
 * Install under `c:\Software\ravi` or `c:\Software\lua53`
-* Set environment variables as follows
+* Set environment variables as follows:
 ```
 c:\Software\ravi\bin\ravi-env.bat
 ```
 Replace `ravi` with `lua53` if you are using Lua.
 
-Note that if you install at some other location then you need to change the paths in following files in the distro:
+Note that if you install at some other location then you need to change the paths in the following files in the distro:
 
 * `bin\ravi-env.bat` or `bin\lua-env.bat`
 * `share\lua\5.3\torch\paths.lua`

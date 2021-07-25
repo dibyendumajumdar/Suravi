@@ -81,3 +81,7 @@
 	path = ravi-libuv-luv
 	url = https://github.com/dibyendumajumdar/ravi-libuv-luv.git
 	branch = ravi-distro
+[submodule "ravi-simplex"]
+	path = ravi-simplex
+	url = https://github.com/dibyendumajumdar/ravi-simplex.git
+	branch = Suravi

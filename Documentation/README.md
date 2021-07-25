@@ -13,6 +13,16 @@
  * [Additional Libraries](pl08-additional.md) 
  * [Technical Choices](pl09-discussion.md) 
 
+<a name="paths.dok"></a>
+# Filename Manipulation Package #
+
+This package provides portable functions and variables to manipulate the file system :
+ 
+  * [Manipulating filenames](paths-filenames.md) : functions for manipulating filenames ;
+  * [Directory functions](paths-dirfunctions.md) : functions for listing and manipulating directories ;
+  * [Directory paths](paths-dirpaths.md) : paths to well known directories ;
+  * [Miscellaneous](paths-misc.md) : uncategorized functions ;
+
 <a name="lpeglabel.dok"></a>
 # Parsing Expression Grammers #
 

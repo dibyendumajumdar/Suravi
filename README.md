@@ -18,19 +18,21 @@ The following libraries have been shortlisted for inclusion:
 Library | Description | Status
 --- | --- | ---
 [LPegLabel](https://github.com/dibyendumajumdar/Suravi/blob/master/Documentation/lpeglabel.md) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Included  
+[LPeg](https://github.com/dibyendumajumdar/Suravi/blob/master/Documentation/lpeg.md) | LPeg is a new pattern-matching library for Lua, based on Parsing Expression Grammars. | Included
 [lua-cjson](https://github.com/dibyendumajumdar/ravi-cjson) | Lua CJSON is a fast JSON encoding/parsing module for Lua | Included
 [LuaFileSystem](https://github.com/dibyendumajumdar/ravi-filesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Included
 [lua-protobuf](https://github.com/dibyendumajumdar/ravi-protobuf) | Google protobuf support for Lua | Included
 [LuaSocket](https://github.com/dibyendumajumdar/ravi-luasocket) | LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet | Included 
 [luaossl](https://github.com/dibyendumajumdar/ravi-luaossl) | Lua OpenSSL is a complete binding for openssl | WIP
-[luv](https://github.com/dibyendumajumdar/ravi-libuv-luv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Included
+[luv](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#libuv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Included
 [Moses](https://github.com/dibyendumajumdar/ravi-moses) | A Lua utility-belt library for functional programming | Included
-[Penlight](https://github.com/dibyendumajumdar/ravi-penlight) | A set of pure Lua libraries focusing on input data handling (such as reading configuration files), functional programming (such as map, reduce, placeholder expressions,etc), and OS path management. Much of the functionality is inspired by the Python standard libraries | Included
-[Torch7](https://github.com/dibyendumajumdar/ravi-torch7) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities, including a Unit Testing framework | Included
-[Torch7-Autograd](https://github.com/dibyendumajumdar/ravi-torch7-autograd) | Autograd automatically differentiates native Torch code | Included
+[Penlight](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#penlight) | A set of pure Lua libraries focusing on input data handling (such as reading configuration files), functional programming (such as map, reduce, placeholder expressions,etc), and OS path management. Much of the functionality is inspired by the Python standard libraries | Included
+[Paths](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#filename-manipulation-package) | This package provides portable functions and variables to manipulate the file system | Included
+[Torch7](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#torch-packages) | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities, including a Unit Testing framework | Included
+[Torch7-Autograd](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#autograd-package) | Autograd automatically differentiates native Torch code | Included
 [Torch-Cephes](https://github.com/deepmind/torch-cephes) | Provides and wraps the mathematical functions from the Cephes mathematical library, developed by Stephen L. Moshier | Broken 
-[Torch7-NN](https://github.com/dibyendumajumdar/ravi-torch7-nn) | This package provides an easy and modular way to build and train simple or complex neural networks using Torch | Included
-[Torch7-Optim](https://github.com/dibyendumajumdar/ravi-torch7-optim) | This package contains a number of optimization routines for  Torch | Included
+[Torch7-NN](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#neural-network-package) | This package provides an easy and modular way to build and train simple or complex neural networks using Torch | Included
+[Torch7-Optim](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#optimization-package) | This package contains a number of optimization routines for  Torch | Included
 
 
 # Downloads

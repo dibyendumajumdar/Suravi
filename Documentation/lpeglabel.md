@@ -7,7 +7,7 @@
 ### Introduction
 
 LPegLabel is a conservative extension of the
-[LPeg](http://www.inf.puc-rio.br/~roberto/lpeg)
+[LPeg](https://github.com/dibyendumajumdar/Suravi/blob/master/Documentation/lpeg.md)
 library that provides an implementation of Parsing
 Expression Grammars (PEGs) with labeled failures.
 Labels can be used to signal different kinds of errors

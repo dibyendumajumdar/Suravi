@@ -2,7 +2,7 @@ cd ravi-external-libs
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53  ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -12,7 +12,7 @@ cd lua
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53  ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -22,7 +22,7 @@ cd ravi-torch-paths
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -32,7 +32,7 @@ cd ravi-torch7-sys
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -42,7 +42,7 @@ cd ravi-torch7
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -52,7 +52,7 @@ cd ravi-torch7-xlua
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -62,7 +62,7 @@ cd ravi-moses
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -72,7 +72,17 @@ cd ravi-filesystem
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
+if %errorlevel% neq 0 exit /b %errorlevel%
+cmake --build . --config Release --target INSTALL
+if %errorlevel% neq 0 exit /b %errorlevel%
+cd ..\..
+
+cd ravi-simplex
+rmdir build /s /q
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -82,7 +92,7 @@ cd ravi-torch7-nn
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -92,7 +102,7 @@ cd ravi-torch7-optim
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -102,7 +112,7 @@ cd ravi-torch7-autograd
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -112,7 +122,7 @@ cd ravi-torch-cephes
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -122,7 +132,7 @@ cd ravi-penlight
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -132,7 +142,7 @@ cd ravi-cjson
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -142,7 +152,7 @@ cd ravi-lpeglabel
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -152,7 +162,7 @@ cd ravi-luasocket
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -162,7 +172,7 @@ cd ravi-libuv-luv
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -172,7 +182,7 @@ cd ravi-protobuf
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -182,7 +192,7 @@ cd ravi-luaossl
 rmdir build /s /q
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON -G "Visual Studio 16 2019" ..
+cmake -DCMAKE_INSTALL_PREFIX=c:/Software/lua53 -DUSE_LUA53=ON ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 cmake --build . --config Release --target INSTALL
 if %errorlevel% neq 0 exit /b %errorlevel%

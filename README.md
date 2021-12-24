@@ -18,7 +18,7 @@ The following libraries have been shortlisted for inclusion:
 Library | Description | Status
 --- | --- | ---
 [LPegLabel](https://github.com/dibyendumajumdar/Suravi/blob/master/Documentation/lpeglabel.md) | LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures. | Included  
-[LPeg](https://github.com/dibyendumajumdar/Suravi/blob/master/Documentation/lpeg.md) | LPeg is a new pattern-matching library for Lua, based on Parsing Expression Grammars. | Included
+[LPeg](https://github.com/dibyendumajumdar/Suravi/blob/master/Documentation/lpeg.md) | LPeg is a new pattern-matching library for Lua, based on Parsing Expression Grammars. | see LPegLabel
 [lua-cjson](https://github.com/dibyendumajumdar/ravi-cjson) | Lua CJSON is a fast JSON encoding/parsing module for Lua | Included
 [LuaFileSystem](https://github.com/dibyendumajumdar/ravi-filesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Included
 [lua-protobuf](https://github.com/dibyendumajumdar/ravi-protobuf) | Google protobuf support for Lua | Included

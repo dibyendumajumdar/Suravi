@@ -51,14 +51,24 @@ The version of Lua supported by this distro is 5.3.5. The following changes were
 
 ## On Linux or Mac OSX
 
-* Install under `$HOME/ravi` or `$HOME/lua53`. 
-* Set environment variables as follows:
+In the `build` folder there are some scripts to help build and install Suravi.
+
+Assuming we are installing under `$HOME/Software/ravi` then we can invoke:
+
 ```
-   source $HOME/ravi/bin/ravi-env.sh
+cd Suravi
+sh build/linux_build.sh $HOME/Software/ravi 
 ```
+
+Once build is complete, we can setup the environment as follows. 
+
+```
+source $HOME/Software/ravi/bin/ravi-env.sh
+```
+
 Replace `ravi` with `lua53` if you are using Lua.
 
-Note that if you install at some other location then you need to change the paths in following files in the distro:
+Note that the installation paths are copied to following files in the distro:
 
 * `bin/ravi-env.sh` or `bin/lua-env.sh`
 * `share/lua/5.3/torch/paths.lua`

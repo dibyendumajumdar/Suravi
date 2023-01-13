@@ -23,7 +23,6 @@ Library | Description | Status
 [LuaFileSystem](https://github.com/dibyendumajumdar/ravi-filesystem) | LuaFileSystem is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.  | Included
 [lua-protobuf](https://github.com/dibyendumajumdar/ravi-protobuf) | Google protobuf support for Lua | Included
 [LuaSocket](https://github.com/dibyendumajumdar/ravi-luasocket) | LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet | Included 
-[luaossl](https://github.com/dibyendumajumdar/ravi-luaossl) | Lua OpenSSL is a complete binding for openssl | WIP
 [luv](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#libuv) | libuv bindings for Lua. [libuv](https://github.com/libuv/libuv) is a multi-platform C library that provides support for asynchronous I/O based on event loops. | Included
 [Moses](https://github.com/dibyendumajumdar/ravi-moses) | A Lua utility-belt library for functional programming | Included
 [Penlight](https://github.com/dibyendumajumdar/Suravi/tree/master/Documentation#penlight) | A set of pure Lua libraries focusing on input data handling (such as reading configuration files), functional programming (such as map, reduce, placeholder expressions,etc), and OS path management. Much of the functionality is inspired by the Python standard libraries | Included
